@@ -1,13 +1,9 @@
 import Vue from "vue";
 import Router from "vue-router";
 
-// Employee containers
-import EmployeeList from "@/containers/employee/EmployeeList";
-import EmployeeCreate from "@/containers/employee/EmployeeCreate";
-
-// Auth containers
-import Login from "@/containers/auth/Login";
-import Register from "@/containers/auth/Register";
+import EmployeeList from "@/components/employee/EmployeeList";
+import EmployeeNew from "@/components/employee/EmployeeNew";
+import Login from "@/components/login/Login";
 
 Vue.use(Router);
 
@@ -23,38 +19,32 @@ let router = new Router({
     },
     {
       path: "/create",
-      name: "EmployeeCreate",
-      component: EmployeeCreate,
+      name: "EmployeeNew",
+      component: EmployeeNew,
       meta: {
         requiresAuth: true
       }
     },
-
     {
       path: "/login",
       name: "Login",
       component: Login
     },
-    {
-      path: "/register",
-      name: "Register",
-      component: Register
-    }
   ]
 });
 
 router.beforeEach((to, from, next) => {
-    if(to.matched.some(record => record.meta.requiresAuth)) {
-      if (localStorage.getItem('auth') === null || localStorage.getItem('auth') === 'false' ) {
-        next({
-          path: '/login',
-        })
-      } else {
-        next()
-      }
+  if(to.matched.some(record => record.meta.requiresAuth)) {
+    if (localStorage.getItem('auth') === null || localStorage.getItem('auth') === 'false' ) {
+      next({
+        path: '/login',
+      })
     } else {
-        next()
+      next()
     }
-  })
+  } else {
+      next()
+  }
+})
 
 export default router;

@@ -9,12 +9,12 @@ Vue.config.productionTip = false;
 
 // Initialize Firebase
 // var config = {
-//   apiKey: 'AIzaSyC8q3jql-ZXK3iprsoIFZ1NnYRgMmeTAIw',
-//   authDomain: 'vue-auth-firebase-7d733.firebaseapp.com',
-//   databaseURL: 'https://vue-auth-firebase-7d733.firebaseio.com',
-//   projectId: 'vue-auth-firebase-7d733',
-//   storageBucket: 'vue-auth-firebase-7d733.appspot.com',
-//   messagingSenderId: '93229610542'
+//   apiKey: '',
+//   authDomain: 'vue-auth-firebase-test.firebaseapp.com',
+//   databaseURL: 'https://vue-auth-firebase-test.firebaseio.com',
+//   projectId: 'vue-auth-firebase-test',
+//   storageBucket: 'vue-auth-firebase-test.appspot.com',
+//   messagingSenderId: ''
 // };
 // firebase.initializeApp(config);
 

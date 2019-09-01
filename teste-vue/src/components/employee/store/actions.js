@@ -68,12 +68,17 @@ const insertEmployee = ({ commit }, obj) => {
 }
 
 const removeEmployee = ({commit}, obj) => {
-  let local = window.localStorage.getItem('employees') && window.localStorage.getItem('employees').length > 0 ? 
-  JSON.parse(window.localStorage.getItem('employees')) : ''
-  local = local.filter((item,index) => {
-    return (obj.id !== item.id)
-  })
-  commit('REMOVE_EMPLOYEE', local)
+  try{
+    let local = window.localStorage.getItem('employees') && window.localStorage.getItem('employees').length > 0 ? 
+    JSON.parse(window.localStorage.getItem('employees')) : ''
+    local = local.filter((item,index) => {
+      return (obj.id !== item.id)
+    })
+    commit('REMOVE_EMPLOYEE', local)
+  }
+  catch(err){
+    commit('LOGOUT')
+  }
 }
 
 const logout = ({commit}, id) => {
