@@ -1,4 +1,5 @@
-[{"id":0,"name":"Roberto","email":"robertokomessu@gmail.com","salary":"$27.28","admission":"11/01/2007"},
+{
+"employees": [{"id":0,"name":"Roberto","email":"robertokomessu@gmail.com","salary":"$27.28","admission":"11/01/2007"},
 {"id":1,"name":"Ellene","email":"ehanbidge0@chronoengine.com","salary":"$9.51","admission":"04/26/2011"},
 {"id":2,"name":"Donelle","email":"dgreenroad1@nbcnews.com","salary":"$4.16","admission":"12/12/2008"},
 {"id":3,"name":"Lona","email":"loglessane2@e-recht24.de","salary":"$3.47","admission":"04/02/2015"},
@@ -49,3 +50,4 @@
 {"id":48,"name":"Cathee","email":"condracek1b@hatena.ne.jp","salary":"$5.42","admission":"05/13/2008"},
 {"id":49,"name":"Barnebas","email":"bvanin1c@posterous.com","salary":"$7.23","admission":"04/26/2011"},
 {"id":50,"name":"Wheeler","email":"wrentoll1d@archive.org","salary":"$5.13","admission":"09/18/2007"}]
+}
